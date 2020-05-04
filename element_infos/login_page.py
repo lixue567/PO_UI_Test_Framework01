@@ -3,11 +3,11 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 current_path = os.path.dirname(__file__)
-driver_path = os.path.join(current_path,'../webdriver/chromedriver')
+driver_path = os.path.join(current_path,'../webdriver/geckodriver')
 
 class LoginPage(object):
     def __init__(self):
-        self.driver = webdriver.Chrome(executable_path=driver_path)
+        self.driver = webdriver.Firefox(executable_path=driver_path)
         self.driver.implicitly_wait(10)
         self.driver.maximize_window()
         self.driver.get('http://106.53.50.202:8999/zentao4/www/my/')
